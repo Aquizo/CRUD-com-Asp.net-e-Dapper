@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Pessoas>
+
+@{
+    ViewData["Title"] = "Listagem de Pessoas";
+}
+
+<h1>Listagem de Pessoas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-success btn-sm">Nova Pessoa</a>
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.peso)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>@Html.DisplayFor(modelItem => item.nome)</td>
+                <td>@Html.DisplayFor(modelItem => item.idade)</td>
+                <td>@Html.DisplayFor(modelItem => item.peso)</td>
+                <td>
+                    <a asp-controller="Pessoas" asp-action="Edit" asp-route-pessoaid="@item.pessoaid" class="btn btn-outline-info btn-sm">Atualizar</a> &emsp;
+                    <form asp-controller="Pessoas" asp-action="Delete" asp-route-pessoaid="@item.pessoaid">
+                        <button type="submit" class="btn btn-outline-danger btn-sm" onclick="confirm('Prosseguir com a exclusão do usuário @item.nome?')">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

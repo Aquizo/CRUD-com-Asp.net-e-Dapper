@@ -1,0 +1,40 @@
+﻿@model CRUD_Dapper.Models.Pessoas
+
+@{
+    ViewData["Title"] = "Nova Pessoa";
+}
+
+<h4 calss="alert alert-secundary">Nova Pessoa</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="idade" class="control-label"></label>
+                <input asp-for="idade" class="form-control" />
+                <span asp-validation-for="idade" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="peso" class="control-label"></label>
+                <input asp-for="peso" class="form-control" />
+                <span asp-validation-for="peso" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-outline-sucess btn-sm"/> &ensp;
+                <a asp-action="Index" class="btn btn-link btn-sm">Voltar</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
