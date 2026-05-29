@@ -1,0 +1,26 @@
+[
+  {
+    "pessoaid": 1,
+    "nome": "João Silva",
+    "idade": 30,
+    "peso":  70.8
+  },
+  {
+    "pessoaid": 2,
+    "nome": "Maria Souza",
+    "idade": 25,
+    "peso": 65.2
+  },
+  {
+    "pessoaid": 3,
+    "nome": "Carlos Lima",
+    "idade": 40,
+    "peso": 80.9
+  },
+  {
+    "pessoaid": 4,
+    "nome": "Aquiles Oliveira",
+    "idade": 19,
+    "peso": 60.5
+  }
+]

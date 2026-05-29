@@ -11,7 +11,7 @@ namespace CRUD_Dapper.Controllers
     public class PessoasController : Controller
     {
 
-        private readonly string ConnectionString = "User ID=SeuNomeDeUsuario;Password=SuaSenha;Host=localhost;Port=5432;Database=pessoaDB;";
+        private readonly string ConnectionString = "User ID=postgres;Password=12345678;Host=localhost;Port=5432;Database=pessoaDB;";
         public IActionResult Index()
         {
             try
